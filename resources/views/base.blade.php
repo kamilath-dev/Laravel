@@ -37,7 +37,11 @@
                 <li><a href="#recommandation">RECOMMENDATION</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html"><span class="gluphicon glyphicon-log-in"> Login </span></a></li>
+                <li><a href="{{ route('register') }}">
+                    <span class="gluphicon glyphicon-log-in">
+                        Login
+                    </span></a>
+                </li>
             </ul>
         </div>
         <!-- <div class="white-divider"></div> -->

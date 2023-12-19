@@ -17,7 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('/')->name('Blog.')->group(function () {
-    Route::get('MyBlog', \App\Http\Controllers\BlogController::class);
-    //Route::get('login', \App\Http\Controllers\RegisterController::class);
+Route::prefix('/MyBlog')->name('Blog.')->group(function () {
+    Route::get('/', \App\Http\Controllers\BlogController::class )->name('Accueil');
+
 });
+
+Route::post('/store', [\App\Http\Controllers\LoginController::class, 'store'])->name('store');
+Route::get('/registration', [\App\Http\Controllers\LoginController::class, 'showForm'])->name('register');
